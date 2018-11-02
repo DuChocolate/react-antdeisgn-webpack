@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "antd": "^3.7.3",
+    "immutability-helper": "^2.8.1",
     "lodash": "^4.17.10",
     "react": "^16.4.2",
     "react-dnd": "^5.0.0",

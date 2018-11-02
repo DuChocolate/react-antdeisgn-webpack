@@ -1,4 +1,5 @@
 import React from 'react';
+import { message } from 'antd';
 import { DragSource } from 'react-dnd';
 import ItemTypes from './ItemTypes';
 const style = {
@@ -9,11 +10,11 @@ const style = {
     marginBottom: '1.5rem',
     cursor: 'move',
     float: 'left'
-}
+};
 const cardSource = {
     beginDrag(props, monitor, component) {
         // Return the data describing the dragged item
-        const item = { 
+        const item = {
             name: props.name,
             source: component
         };
@@ -23,9 +24,9 @@ const cardSource = {
         const item = monitor.getItem();
         const dropResult = monitor.getDropResult();
         // /dropResult.target.props.children
-        console.log(dropResult.target.props.children,'------',item, dropResult);
+        console.log(dropResult.target.props.children, '------', item, dropResult);
 		if (dropResult) {
-			alert(`You dropped ${item.name} into ${dropResult.name}!`)
+			message.info(`You dropped ${item.name} into ${dropResult.name}!`);
 		}
 	}
 };

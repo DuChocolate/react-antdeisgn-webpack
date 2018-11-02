@@ -22,7 +22,7 @@ import Hello from './components/Hello';
 class Root extends React.Component {
     render(){
         return (
-            <Provider store={store}>
+            // <Provider store={store}>
                 <Router history={history}>
                     <Layout>
                         <Route exact path='/' component={Welcome}/>
@@ -39,7 +39,7 @@ class Root extends React.Component {
                         <Route path='/hello' component={Hello}/>
                     </Layout>
                 </Router>
-            </Provider>
+            // </Provider>
         );
     }
 }

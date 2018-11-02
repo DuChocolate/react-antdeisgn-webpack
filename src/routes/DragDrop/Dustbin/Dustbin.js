@@ -11,22 +11,22 @@ const style = {
 	textAlign: 'center',
 	fontSize: '1rem',
 	lineHeight: 'normal',
-	float: 'left',
-}
+	float: 'left'
+};
 const boxTarget = {
     drop(props, monitor, component) {
-        return { 
+        return {
             name: 'Dustbin',
             target: component
-        }
-	},
-}
+        };
+	}
+};
 function collect(connect, monitor){
     return {
         connectDropTarget: connect.dropTarget(),
 		isOver: monitor.isOver(),
-		canDrop: monitor.canDrop(),
-    }
+		canDrop: monitor.canDrop()
+    };
 }
 class Dustbin extends React.Component{
     render() {
