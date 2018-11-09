@@ -33,20 +33,22 @@ class Container extends React.Component{
             boxes: this.props.boxes
         };
     }
+    componentWillReceiveProps(nextProps){
+        console.log('========');
+        this.setState({
+            boxes: nextProps.boxes
+        })
+    }
     moveBox = (id, left, top) => {
-		this.setState(
-			update(this.state, {
-				boxes: {
-					[id]: {
-						$merge: { left, top },
-					},
-				},
-			}),
-		)
+        const boxes = this.state.boxes;
+        boxes[id].left = left;
+        boxes[id].top = top;
+        this.setState({ boxes });
 	}
     render() {
         const { connectDropTarget } = this.props;
-		const { boxes } = this.state;
+        const { boxes } = this.state;
+        console.log('---cccccc----',boxes);
         return (
             connectDropTarget(
                 <div style={styles}>

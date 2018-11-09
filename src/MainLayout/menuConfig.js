@@ -28,5 +28,11 @@ export default [
             { key: '/app/imag/uploadImags', title: '图片裁剪' },
             { key: '/app/imag/dragDrop', title: '组件拖拽' }
         ]
+    },
+    {
+        key: '/app/echarts', title: '数据可视化', icon: 'camera',
+        subs: [
+            { key: '/app/imag/echartsCom', title: 'Echarts' },
+        ]
     }
 ];

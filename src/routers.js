@@ -17,6 +17,7 @@ import Paginations from './routes/Paginations';
 import StepsBar from './routes/StepsBar';
 import UploadImags from './routes/UploadImags';
 import DragDrop from './routes/DragDrop';
+import EchartsCom from './routes/EchartsCom';
 import Hello from './components/Hello';
 
 class Root extends React.Component {
@@ -36,6 +37,7 @@ class Root extends React.Component {
                         <Route path='/app/ui/stepsBar' component={StepsBar}/>
                         <Route path='/app/imag/uploadImags' component={UploadImags}/>
                         <Route path='/app/imag/dragDrop' component={DragDrop}/>
+                        <Route path='/app/imag/echartsCom' component={EchartsCom}/>
                         <Route path='/hello' component={Hello}/>
                     </Layout>
                 </Router>
